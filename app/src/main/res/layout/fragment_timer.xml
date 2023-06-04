@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/pickerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <NumberPicker
+            android:id="@+id/hourPicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:descendantFocusability="blocksDescendants" />
+
+        <NumberPicker
+            android:id="@+id/minutePicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:descendantFocusability="blocksDescendants" />
+
+        <NumberPicker
+            android:id="@+id/secondPicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:descendantFocusability="blocksDescendants" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/pickerContainer"
+        android:layout_centerHorizontal="true"
+        android:text="Старт" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/startButton"
+        android:layout_centerHorizontal="true"
+        android:text="Стоп"
+        android:enabled="false" />
+
+    <TextView
+        android:id="@+id/countdownTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/stopButton"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
